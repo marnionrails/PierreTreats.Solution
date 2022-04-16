@@ -9,6 +9,11 @@
 @if (User.Identity.IsAuthenticated)
 {
     <p>You are logged in as @User.Identity.Name.</p>
+    <ul class>
+        <li>@Html.ActionLink("Manage flavors","Index","Flavors")</li>
+        <li>@Html.ActionLink("Manage treats","Index","Treats")</li>
+    </ul>
+    <br />
     @using (Html.BeginForm("LogOff", "Account"))
     {
         <input type="submit" class="btn btn-default" value="Log out" />
