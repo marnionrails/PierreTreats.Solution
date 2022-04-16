@@ -12,6 +12,9 @@
   @Html.Label("Flavor description")
   @Html.EditorFor(model => model.Description, new { @class = "form-control", required="required"})
 
+  @Html.Label("Add a treat")
+  @Html.DropDownList("TreatId")
+
   <input type="submit" value="Save" class="btn btn-default" required="true" />
 }
 
